@@ -760,8 +760,8 @@ static void set_hidden_state(Con *con) {
         return;
 
     if (should_be_hidden) {
-        DLOG("setting _NET_WM_STATE_HIDDEN for con = %p\n", con);
-        xcb_add_property_atom(conn, con->window->id, A__NET_WM_STATE, A__NET_WM_STATE_HIDDEN);
+        /* DLOG("setting _NET_WM_STATE_HIDDEN for con = %p\n", con); */
+        /* xcb_add_property_atom(conn, con->window->id, A__NET_WM_STATE, A__NET_WM_STATE_HIDDEN); */
     } else {
         DLOG("removing _NET_WM_STATE_HIDDEN for con = %p\n", con);
         xcb_remove_property_atom(conn, con->window->id, A__NET_WM_STATE, A__NET_WM_STATE_HIDDEN);
